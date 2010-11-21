@@ -12,7 +12,7 @@ Ext.setup({
         '<tpl if="moons.length &gt; 0">',
           'moons: ',
           '<tpl for="moons">',
-            '{.} ({#})',
+            '<a href="#/{[parent.name]}/{[values]}">{.}</a> ({#})',
             '{[xindex < xcount ? ", " : ""]}',
           '</tpl>',
         '</tpl>',
