@@ -4,8 +4,10 @@ Ext.setup({
 
     planetInfo = new Ext.XTemplate(
       '<tpl for=".">',
-      '<h2>{name}</h2>',
-      'mass: {mass}',
+        '<h2>{name}</h2>',
+        '<tpl for="moons">',
+          '{.} ',
+        '</tpl>',
       '</tpl>'
     );
 
@@ -15,9 +17,19 @@ Ext.setup({
       tpl: planetInfo
     });
     
-    planetEarth = { name: "Earth", mass: 1.00 };
-    planetMars  = { name: "Mars",  mass: 0.11 };
-    planets = [planetEarth, planetMars];
+    planetEarth = {
+      name: "Earth",
+      mass: 1.00,
+      moons: ["The moon"]
+    };
+    
+    planetMars  = {
+      name: "Mars",
+      mass: 0.11,
+      moons: ["Phobos", "Deimos"]
+    };
+
+    planets = [planetEarth, planetMars]
 
     content.update(planets);
   }
