@@ -4,14 +4,15 @@ Ext.setup({
 
     planetInfo = new Ext.XTemplate(
       '<tpl for=".">',
-        '<h2>{name}</h2>',
+        '<h2>{name} ({#})</h2>',
+        'mass: {mass}<br/>',
         '<tpl if="moons.length === 0">',
           'no moons',
         '</tpl>',
         '<tpl if="moons.length &gt; 0">',
           'moons: ',
           '<tpl for="moons">',
-            '{.} ',
+            '{.} ({#}) ',
           '</tpl>',
         '</tpl>',
       '</tpl>'
