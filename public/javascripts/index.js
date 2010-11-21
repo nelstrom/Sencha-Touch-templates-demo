@@ -1,6 +1,33 @@
 Ext.setup({
   onReady: function() {
-    var content, planetInfo, planets, jupiterMoons, saturnMoons, uranusMoons, neptuneMoons;
+    var helperFunctions, content, planetInfo, planets, jupiterMoons, saturnMoons, uranusMoons, neptuneMoons;
+
+    var anotherTemplate = new Ext.XTemplate(
+      '<tpl for=".">',
+        '{name}',
+        '{[this.listSeparator(xindex,count)]}',
+      '</tpl>',
+      helperFunctions
+    );
+
+    helperFunctions = {
+      hasMoons: function(moons) {
+        return moons.length > 0
+      },
+      listClasses: function(position, size) {
+        var classes = [];
+        if (position%2 === 0)  { classes.push("even") }
+        else                   { classes.push("odd") };
+        if (position === 1)    { classes.push("first") };
+        if (position === size) { classes.push("last") };
+        return classes.join(" ");
+      },
+      listSeparator: function(position, size) {
+        if (position === size) { return "" }
+        else if (position < size-1) { return ", "}
+        else { return " and "};
+      }
+    }
 
     planetInfo = new Ext.XTemplate(
       '<ul id="planetList">',
@@ -21,24 +48,7 @@ Ext.setup({
         '</li>',
       '</tpl>',
       '</ul>',
-      {
-        hasMoons: function(moons) {
-          return moons.length > 0
-        },
-        listClasses: function(position, size) {
-          var classes = [];
-          if (position%2 === 0)  { classes.push("even") }
-          else                   { classes.push("odd") };
-          if (position === 1)    { classes.push("first") };
-          if (position === size) { classes.push("last") };
-          return classes.join(" ");
-        },
-        listSeparator: function(position, size) {
-          if (position === size) { return "" }
-          else if (position < size-1) { return ", "}
-          else { return " and "};
-        }
-      }
+      helperFunctions
     );
 
     content = new Ext.Panel({
