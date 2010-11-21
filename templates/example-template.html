@@ -1,0 +1,18 @@
+<ul id="planetList">
+<tpl for=".">
+  <li class="{[this.listClasses(xindex,xcount)]}">
+    <h2>{name} ({#})</h2>
+    mass: {mass}<br/>
+    <tpl if="moons.length === 0">
+      no moons
+    </tpl>
+    <tpl if="this.hasMoons(moons)">
+      moons: 
+      <tpl for="moons">
+        <a href="#/{[parent.name]}/{[values]}">{.}</a> ({#})
+        {[this.listSeparator(xindex,xcount)]}
+      </tpl>
+    </tpl>
+  </li>
+</tpl>
+</ul>
