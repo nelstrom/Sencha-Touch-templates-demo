@@ -6,25 +6,25 @@ Each of the links below represents a snapshot of the code at a point in the vide
 
 # PART ONE
 
-* [01_constructing_templates][01] (1:17)
-* [02_placeholders][02] (2:04)
-* [03_formatting_functions][03] (2:40)
-* [04_looping][04] (5:38)
-* [05_nested_loops][05] (6:45)
-* [06_conditionals][06] (8:25)
-* [07_numbering][07] (9:10)
-* [08_index_and_size][08] (11:12)
-* [09_parent_object][09] (11:47)
+* [Constructing Templates][01] (1:17)
+* [Using placeholders][02] (2:04)
+* [Formatting functions][03] (2:40)
+* [Looping through lists][04] (5:38)
+* [Looping through nested lists][05] (6:45)
+* [Showing content conditionally][06] (8:25)
+* [Numbering list items][07] (9:10)
+* [Using list size with index][08] (11:12)
+* [Accessing the parent object][09] (11:47)
 
 # PART TWO
 
-* [10_member_functions][10] (2:59)
-* [11_sharing_member_functions][11] (3:35)
-* [12_xtemplate_from_DOM][12] (7:18)
-* [13_serve_with_sinatra][13] (8:56)
-* [14_template_files][14] (9:34)
+* [Using member functions][10] (2:59)
+* [Sharing member functions between templates][11] (3:35)
+* [Loading an XTemplate from the DOM][12] (7:18)
+* [Serving the application with Sinatra][13] (8:56)
+* [Keeping XTemplate snippets in individual files][14] (9:34)
 
-## Using this repository to follow the screencast
+## Using this repository to follow the screencasts
 
 First, you'll have to clone this repository:
 
