@@ -3,20 +3,42 @@ Ext.setup({
     var content, planetInfo, planets, jupiterMoons, saturnMoons, uranusMoons, neptuneMoons;
 
     planetInfo = new Ext.XTemplate(
+      '<ul id="planetList">',
       '<tpl for=".">',
-        '<h2>{name} ({#})</h2>',
-        'mass: {mass}<br/>',
-        '<tpl if="moons.length === 0">',
-          'no moons',
-        '</tpl>',
-        '<tpl if="moons.length &gt; 0">',
-          'moons: ',
-          '<tpl for="moons">',
-            '<a href="#/{[parent.name]}/{[values]}">{.}</a> ({#})',
-            '{[xindex < xcount ? ", " : ""]}',
+        '<li class="{[this.listClasses(xindex, xcount)]}">',
+          '<h2>{name} ({#})</h2>',
+          'mass: {mass}<br/>',
+          '<tpl if="moons.length === 0">',
+            'no moons',
           '</tpl>',
-        '</tpl>',
-      '</tpl>'
+          '<tpl if="this.hasMoons(moons)">',
+            'moons: ',
+            '<tpl for="moons">',
+              '<a href="#/{[parent.name]}/{[values]}">{.}</a> ({#})',
+              '{[this.listSeparator(xindex, xcount)]}',
+            '</tpl>',
+          '</tpl>',
+        '</li>',
+      '</tpl>',
+      '</ul>',
+      {
+        hasMoons: function(moons) {
+          return moons.length > 0
+        },
+        listClasses: function(position, size) {
+          var classes = [];
+          if (position%2 === 0)  { classes.push("even") }
+          else                   { classes.push("odd") };
+          if (position === 1)    { classes.push("first") };
+          if (position === size) { classes.push("last") };
+          return classes.join(" ");
+        },
+        listSeparator: function(position, size) {
+          if (position === size) { return "" }
+          else if (position < size-1) { return ", "}
+          else { return " and "};
+        }
+      }
     );
 
     content = new Ext.Panel({
