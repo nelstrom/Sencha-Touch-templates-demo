@@ -2,14 +2,6 @@ Ext.setup({
   onReady: function() {
     var helperFunctions, content, planetInfo, planets, jupiterMoons, saturnMoons, uranusMoons, neptuneMoons;
 
-    var anotherTemplate = new Ext.XTemplate(
-      '<tpl for=".">',
-        '{name}',
-        '{[this.listSeparator(xindex,count)]}',
-      '</tpl>',
-      helperFunctions
-    );
-
     helperFunctions = {
       hasMoons: function(moons) {
         return moons.length > 0
@@ -29,27 +21,7 @@ Ext.setup({
       }
     }
 
-    planetInfo = new Ext.XTemplate(
-      '<ul id="planetList">',
-      '<tpl for=".">',
-        '<li class="{[this.listClasses(xindex, xcount)]}">',
-          '<h2>{name} ({#})</h2>',
-          'mass: {mass}<br/>',
-          '<tpl if="moons.length === 0">',
-            'no moons',
-          '</tpl>',
-          '<tpl if="this.hasMoons(moons)">',
-            'moons: ',
-            '<tpl for="moons">',
-              '<a href="#/{[parent.name]}/{[values]}">{.}</a> ({#})',
-              '{[this.listSeparator(xindex, xcount)]}',
-            '</tpl>',
-          '</tpl>',
-        '</li>',
-      '</tpl>',
-      '</ul>',
-      helperFunctions
-    );
+    planetInfo = Ext.XTemplate.from("example-template", helperFunctions);
 
     content = new Ext.Panel({
       fullscreen: true,
