@@ -6,24 +6,23 @@ Each of the links below represents a snapshot of the code at a point in the vide
 
 # PART ONE
 
-* [01_constructing_templates][01]
-* [02_placeholders][02]
-* [03_formatting_functions][03]
-* [04_looping][04]
-* [05_nested_loops][05]
-* [06_conditionals][06]
-* [07_numbering][07]
-* [08_index_and_size][08]
-* [09_parent_object][09]
+* [01_constructing_templates][01] (1:17)
+* [02_placeholders][02] (2:04)
+* [03_formatting_functions][03] (2:40)
+* [04_looping][04] (5:38)
+* [05_nested_loops][05] (6:45)
+* [06_conditionals][06] (8:25)
+* [07_numbering][07] (9:10)
+* [08_index_and_size][08] (11:12)
+* [09_parent_object][09] (11:47)
 
 # PART TWO
 
-* [10_member_functions][10]
-* [11_sharing_member_functions][11]
-* [12_xtemplate_from_DOM][12]
-* [13_serve_with_sinatra][13]
-* [14_template_files][14]
-
+* [10_member_functions][10] (2:59)
+* [11_sharing_member_functions][11] (3:35)
+* [12_xtemplate_from_DOM][12] (7:18)
+* [13_serve_with_sinatra][13] (8:56)
+* [14_template_files][14] (9:34)
 
 
 [1]: http://vimeo.com/16289757
@@ -40,7 +39,7 @@ Each of the links below represents a snapshot of the code at a point in the vide
 [08]: https://github.com/nelstrom/Sencha-Touch-templates-demo/tree/08_index_and_size
 [09]: https://github.com/nelstrom/Sencha-Touch-templates-demo/tree/09_parent_object
 [10]: https://github.com/nelstrom/Sencha-Touch-templates-demo/tree/10_member_functions
-[12]: https://github.com/nelstrom/Sencha-Touch-templates-demo/tree/11_sharing_member_functions
+[11]: https://github.com/nelstrom/Sencha-Touch-templates-demo/tree/11_sharing_member_functions
 [12]: https://github.com/nelstrom/Sencha-Touch-templates-demo/tree/12_xtemplate_from_DOM
 [13]: https://github.com/nelstrom/Sencha-Touch-templates-demo/tree/13_serve_with_sinatra
 [14]: https://github.com/nelstrom/Sencha-Touch-templates-demo/tree/14_template_files
