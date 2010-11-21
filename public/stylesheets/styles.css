@@ -1,0 +1,4 @@
+#planetList li.odd  { background-color: #ffffff; }
+#planetList li.even { background-color: #e4f1fe; }
+#planetList li      { border-bottom: 1px solid #999; }
+#planetList li.last { border-bottom-style: none;}
