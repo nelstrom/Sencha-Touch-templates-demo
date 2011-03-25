@@ -56,7 +56,7 @@ You can review the list of local branches by running:
 
     git branches
 
-And you can switch between branches with the checkout command. For example, to check out the `03_generated_golden_spiral` branch, run:
+And you can switch between branches with the checkout command. For example, to check out the `12_xtemplate_from_DOM` branch, run:
 
     git co 12_xtemplate_from_DOM
 
